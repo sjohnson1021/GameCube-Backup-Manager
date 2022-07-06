@@ -202,6 +202,7 @@ namespace GCBM
             System.Threading.Thread.CurrentThread.CurrentUICulture.ClearCachedData();
             System.Threading.Thread.CurrentThread.CurrentCulture.ClearCachedData();
             AdjustLanguage();
+            dgvSelected = dgvGameList;
             this.Show();
         }
 
@@ -931,7 +932,8 @@ namespace GCBM
         /// Reloads the contents of the DataGridView Games List.
         /// </summary>
         private void ReloadDataGridViewGameList(DataGridView dgv)
-        {    
+        {
+            dgvSelected = dgv;
             if (dgv.RowCount != 0)
             {
 
@@ -4381,13 +4383,16 @@ namespace GCBM
                  */
 
                 //There's a way to do this in a single line.. but
-                if (dgvSelected.Rows[e.RowIndex].Cells[0].Value.ToString() == "False")
+                if (dgvSelected != null)
                 {
-                    dgvSelected.Rows[e.RowIndex].Cells[0].Value = true;
-                }
-                else
-                {
-                    dgvSelected.Rows[e.RowIndex].Cells[0].Value = false;
+                    if (dgvSelected.Rows[e.RowIndex].Cells[0].Value.ToString() == "False")
+                    {
+                        dgvSelected.Rows[e.RowIndex].Cells[0].Value = true;
+                    }
+                    else
+                    {
+                        dgvSelected.Rows[e.RowIndex].Cells[0].Value = false;
+                    }
                 }
             }
         }
