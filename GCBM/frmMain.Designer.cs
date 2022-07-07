@@ -199,7 +199,6 @@ namespace GCBM
             this.cmsNotifyIcon = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tsmiNotifyExit = new System.Windows.Forms.ToolStripMenuItem();
             this.pbNetStatus = new System.Windows.Forms.PictureBox();
-            this.gameBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.spcMain)).BeginInit();
             this.spcMain.Panel1.SuspendLayout();
             this.spcMain.Panel2.SuspendLayout();
@@ -228,7 +227,6 @@ namespace GCBM
             this.mstripMain.SuspendLayout();
             this.cmsNotifyIcon.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbNetStatus)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gameBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // spcMain
@@ -1429,10 +1427,6 @@ namespace GCBM
             resources.ApplyResources(this.tsmiMenuAbout, "tsmiMenuAbout");
             this.tsmiMenuAbout.Click += new System.EventHandler(this.tsmiMenuAbout_Click);
             // 
-            // fbd1
-            // 
-            this.fbd1.RootFolder = System.Environment.SpecialFolder.MyComputer;
-            // 
             // fbd2
             // 
             this.fbd2.RootFolder = System.Environment.SpecialFolder.MyComputer;
@@ -1468,10 +1462,6 @@ namespace GCBM
             this.pbNetStatus.Image = global::GCBM.Properties.Resources.not_conected_16;
             this.pbNetStatus.Name = "pbNetStatus";
             this.pbNetStatus.TabStop = false;
-            // 
-            // gameBindingSource
-            // 
-            this.gameBindingSource.DataSource = typeof(GCBM.Game);
             // 
             // frmMain
             // 
@@ -1526,7 +1516,6 @@ namespace GCBM
             this.mstripMain.PerformLayout();
             this.cmsNotifyIcon.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbNetStatus)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gameBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1686,7 +1675,6 @@ namespace GCBM
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem tsmiExportLog;
         private System.Windows.Forms.ToolStripMenuItem tsmiRenameFolders;
-        private System.Windows.Forms.BindingSource gameBindingSource;
         private System.Windows.Forms.DataGridViewCheckBoxColumn clmChk;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmTitle;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmRegion;
