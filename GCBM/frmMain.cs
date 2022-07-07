@@ -96,6 +96,7 @@ namespace GCBM
         private int intQueueLength;
         private int intQueuePos;
         private List<string> lstInstallQueue = new List<string>();
+        private List<Game> sourceGames = new List<Game>();
         private DataGridView dgvSelected = new DataGridView();
 
         [DllImport("kernel32.dll")]
@@ -949,7 +950,7 @@ namespace GCBM
                     }
                     if (ERROR == false)
                     {
-                        LoadCover(tbIDGame.Text);
+                        LoadCover(dgv.CurrentRow.Cells[3].Value.ToString());
                     }
                     // pictureBox GameID
                     if (pbWebGameID.Enabled == false)
@@ -1416,6 +1417,7 @@ namespace GCBM
             }
 
             tbIDRegionDisc.Text = dgvSelected.CurrentRow.Cells[2].Value.ToString();
+
         }
         #endregion
 
@@ -4364,6 +4366,9 @@ namespace GCBM
                     dgvGameListPath = fbd1.SelectedPath;
                     DisplayFilesSelected(fbd1.SelectedPath, dgvGameList);
                     ListIsoFile();
+
+                    //Store the list of games in memory.. This should be MUCH faster.
+                    sourceGames = GameList(dgvGameListPath); 
                 }
             }
             catch (Exception ex)
@@ -4448,6 +4453,78 @@ namespace GCBM
             }
         }
 
+        #endregion
+
+        #region Organize Library
+        private void tsmiRenameFolders_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("This will Create new folders for each game if they don't exist in 'Title [ID]' format," +
+                            "and rename the file to game.iso/gcm Please ensure this is what you want, it may take a" +
+                            " while depending on the size of your library.", "Are you sure?", MessageBoxButtons.YesNo);
+
+            foreach (Game game in sourceGames)
+            {
+                FileInfo fileInfo = new FileInfo(game.Path);
+                //Check if file exists already
+                string newPath = Path.Combine(dgvGameListPath, (game.Title +
+                    " [" + game.ID + "]").Replace(":", " - ").Replace(";", " - ").Replace(",", " - ").Replace(" -  ", " - "));
+                FileInfo newFile = new FileInfo(newPath + "\\game.iso");
+                if (File.Exists(newPath + "\\game.iso"))
+                {
+                    break;
+                }
+                else
+                {
+                    if (!Directory.Exists(newPath))
+                    {
+                        Directory.CreateDirectory(newPath);
+                    }
+                    try
+                    {
+                        Task.Run(() =>
+                        {
+                            //_source.CopyTo(_destination, true);
+                            fileInfo.CopyTo(newFile, x => pbCopy.BeginInvoke(new Action(() =>
+                            {
+                                DisableOptionsGame(dgvGameList);
+                                dgvGameList.Enabled = false;
+                                pbCopy.Visible = true;
+                                lblCopy.Visible = true;
+                                lblPercent.Visible = true;
+                                lblInstallGame.Visible = true;
+                                pbCopy.Value = x;
+                                lblCopy.Text = GCBM.Properties.Resources.CopyTask_String1;
+                                lblInstallGame.Text = GCBM.Properties.Resources.CopyTask_String2 + tbIDName.Text;
+                                lblPercent.Text = x.ToString() + "%";
+                            })));
+                        }).GetAwaiter().OnCompleted(() => pbCopy.BeginInvoke(new Action(() =>
+                        {
+                            pbCopy.Value = 100;
+                            lblCopy.Text = GCBM.Properties.Resources.CopyTask_String3;
+                            lblInstallGame.Text = GCBM.Properties.Resources.CopyTask_String4;
+                            lblPercent.Text = GCBM.Properties.Resources.CopyTask_String5;
+                            GlobalNotifications(GCBM.Properties.Resources.InstallGameScrub_String5, ToolTipIcon.Info);
+                            EnableOptionsGameList();
+                            dgvGameList.Enabled = true;
+                            pbCopy.Visible = false;
+                            lblCopy.Visible = false;
+                            lblPercent.Visible = false;
+                            lblInstallGame.Visible = false;
+                            intQueuePos++;
+                            WORKING = false;
+
+                        })));
+                    }
+
+                    catch (Exception error)
+                    {
+
+                        throw error;
+                    }
+                }
+
+            }
+        }
         #endregion
 
         //Restarts the application (closes and reopens)

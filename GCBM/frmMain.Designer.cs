@@ -468,6 +468,7 @@ namespace GCBM
             this.clmSize,
             this.clmPath});
             this.dgvGameList.ContextMenuStrip = this.cmsMain;
+            this.dgvGameList.MultiSelect = false;
             this.dgvGameList.Name = "dgvGameList";
             this.dgvGameList.ReadOnly = true;
             this.dgvGameList.RowHeadersVisible = false;
@@ -1311,9 +1312,10 @@ namespace GCBM
             // 
             // tsmiRenameFolders
             // 
+            resources.ApplyResources(this.tsmiRenameFolders, "tsmiRenameFolders");
             this.tsmiRenameFolders.Image = global::GCBM.Properties.Resources.rename_folder_16;
             this.tsmiRenameFolders.Name = "tsmiRenameFolders";
-            resources.ApplyResources(this.tsmiRenameFolders, "tsmiRenameFolders");
+            this.tsmiRenameFolders.Click += new System.EventHandler(this.tsmiRenameFolders_Click);
             // 
             // tsmiRenameISO
             // 
