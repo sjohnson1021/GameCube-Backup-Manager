@@ -201,6 +201,7 @@ namespace GCBM
             this.tsmiNotifyExit = new System.Windows.Forms.ToolStripMenuItem();
             this.pbNetStatus = new System.Windows.Forms.PictureBox();
             this.gameBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tabTransfers = new System.Windows.Forms.TabPage();
             ((System.ComponentModel.ISupportInitialize)(this.spcMain)).BeginInit();
             this.spcMain.Panel1.SuspendLayout();
             this.spcMain.Panel2.SuspendLayout();
@@ -297,6 +298,7 @@ namespace GCBM
             this.tabControlMain.Controls.Add(this.tabMainDisc);
             this.tabControlMain.Controls.Add(this.tabMainDatabase);
             this.tabControlMain.Controls.Add(this.tabMainLog);
+            this.tabControlMain.Controls.Add(this.tabTransfers);
             this.tabControlMain.Name = "tabControlMain";
             this.tabControlMain.SelectedIndex = 0;
             this.tabControlMain.SelectedIndexChanged += new System.EventHandler(this.tabControlMain_SelectedIndexChanged);
@@ -1476,6 +1478,12 @@ namespace GCBM
             this.pbNetStatus.Name = "pbNetStatus";
             this.pbNetStatus.TabStop = false;
             // 
+            // tabTransfers
+            // 
+            resources.ApplyResources(this.tabTransfers, "tabTransfers");
+            this.tabTransfers.Name = "tabTransfers";
+            this.tabTransfers.UseVisualStyleBackColor = true;
+            // 
             // frmMain
             // 
             resources.ApplyResources(this, "$this");
@@ -1708,6 +1716,7 @@ namespace GCBM
         private System.Windows.Forms.DataGridViewTextBoxColumn clmDiscSize;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmDiscPath;
         private System.Windows.Forms.GroupBox grpSearch;
+        private System.Windows.Forms.TabPage tabTransfers;
     }
 }
 

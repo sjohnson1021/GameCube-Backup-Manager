@@ -221,6 +221,12 @@
     <Compile Include="tools\MediaItem\FileItem.cs" />
     <Compile Include="tools\MediaItem\IMediaItem.cs" />
     <Compile Include="tools\MediaItem\Win32.cs" />
+    <Compile Include="TransferProgress.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TransferProgress.Designer.cs">
+      <DependentUpon>TransferProgress.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frmAboutBox.en-US.resx">
       <DependentUpon>frmAboutBox.cs</DependentUpon>
     </EmbeddedResource>
@@ -388,6 +394,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="tools\frmMetaXml.resx">
       <DependentUpon>frmMetaXml.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransferProgress.resx">
+      <DependentUpon>TransferProgress.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.manifest" />
     <None Include="media\Web\resources\OpenSans-Light.ttf" />
