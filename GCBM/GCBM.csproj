@@ -98,6 +98,12 @@
   <ItemGroup>
     <Compile Include="ExportDataTableToHTML.cs" />
     <Compile Include="FileInfoExtension.cs" />
+    <Compile Include="frmBulk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBulk.Designer.cs">
+      <DependentUpon>frmBulk.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAboutBox.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -221,6 +227,21 @@
     <Compile Include="tools\MediaItem\FileItem.cs" />
     <Compile Include="tools\MediaItem\IMediaItem.cs" />
     <Compile Include="tools\MediaItem\Win32.cs" />
+    <Compile Include="BulkTransfer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BulkTransfer.Designer.cs">
+      <DependentUpon>BulkTransfer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TransferProgress.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TransferProgress.Designer.cs">
+      <DependentUpon>TransferProgress.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmBulk.resx">
+      <DependentUpon>frmBulk.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAboutBox.en-US.resx">
       <DependentUpon>frmAboutBox.cs</DependentUpon>
     </EmbeddedResource>
@@ -284,6 +305,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmInformation.resx">
       <DependentUpon>frmInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.en-TC.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.en-UM.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.en-US.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
@@ -388,6 +415,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="tools\frmMetaXml.resx">
       <DependentUpon>frmMetaXml.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BulkTransfer.resx">
+      <DependentUpon>BulkTransfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransferProgress.resx">
+      <DependentUpon>TransferProgress.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.manifest" />
     <None Include="media\Web\resources\OpenSans-Light.ttf" />
