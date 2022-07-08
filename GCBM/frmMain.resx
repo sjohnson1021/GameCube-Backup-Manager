@@ -1280,6 +1280,27 @@
   <metadata name="grpOperations.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="nudTransfers.Location" type="System.Drawing.Point, System.Drawing">
+    <value>56, 41</value>
+  </data>
+  <data name="nudTransfers.Size" type="System.Drawing.Size, System.Drawing">
+    <value>38, 20</value>
+  </data>
+  <data name="nudTransfers.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;nudTransfers.Name" xml:space="preserve">
+    <value>nudTransfers</value>
+  </data>
+  <data name="&gt;&gt;nudTransfers.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;nudTransfers.Parent" xml:space="preserve">
+    <value>grpOperations</value>
+  </data>
+  <data name="&gt;&gt;nudTransfers.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <metadata name="btnGameInstallScrub.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -1339,7 +1360,7 @@
     <value>grpOperations</value>
   </data>
   <data name="&gt;&gt;btnGameInstallScrub.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <metadata name="btnGameInstallExactCopy.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1405,7 +1426,7 @@
     <value>grpOperations</value>
   </data>
   <data name="&gt;&gt;btnGameInstallExactCopy.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="grpOperations.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 147</value>
@@ -1894,7 +1915,7 @@
     <value>3, 3</value>
   </data>
   <data name="mstripFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>870, 24</value>
+    <value>876, 24</value>
   </data>
   <data name="mstripFile.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -1918,7 +1939,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="tabMainFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>876, 514</value>
+    <value>882, 514</value>
   </data>
   <data name="tabMainFile.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2578,7 +2599,7 @@
     <value>3, 3</value>
   </data>
   <data name="mstripDisc.Size" type="System.Drawing.Size, System.Drawing">
-    <value>870, 27</value>
+    <value>876, 27</value>
   </data>
   <data name="mstripDisc.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -2602,7 +2623,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="tabMainDisc.Size" type="System.Drawing.Size, System.Drawing">
-    <value>876, 514</value>
+    <value>882, 514</value>
   </data>
   <data name="tabMainDisc.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -2818,7 +2839,7 @@
     <value>3, 3</value>
   </data>
   <data name="mstripDatabase.Size" type="System.Drawing.Size, System.Drawing">
-    <value>870, 24</value>
+    <value>876, 24</value>
   </data>
   <data name="mstripDatabase.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -2842,7 +2863,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="tabMainDatabase.Size" type="System.Drawing.Size, System.Drawing">
-    <value>876, 514</value>
+    <value>882, 514</value>
   </data>
   <data name="tabMainDatabase.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -2929,7 +2950,7 @@
     <value>3, 3</value>
   </data>
   <data name="mstripLog.Size" type="System.Drawing.Size, System.Drawing">
-    <value>870, 24</value>
+    <value>876, 24</value>
   </data>
   <data name="mstripLog.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2953,7 +2974,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="tabMainLog.Size" type="System.Drawing.Size, System.Drawing">
-    <value>876, 514</value>
+    <value>882, 514</value>
   </data>
   <data name="tabMainLog.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -2973,11 +2994,131 @@
   <data name="&gt;&gt;tabMainLog.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="transferProgress5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 131</value>
+  </data>
+  <data name="transferProgress5.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="transferProgress5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>216, 26</value>
+  </data>
+  <data name="transferProgress5.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;transferProgress5.Name" xml:space="preserve">
+    <value>transferProgress5</value>
+  </data>
+  <data name="&gt;&gt;transferProgress5.Type" xml:space="preserve">
+    <value>GCBM.TransferProgress, GCBM, Version=2.4.6.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;transferProgress5.Parent" xml:space="preserve">
+    <value>tabTransfers</value>
+  </data>
+  <data name="&gt;&gt;transferProgress5.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="transferProgress4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 101</value>
+  </data>
+  <data name="transferProgress4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="transferProgress4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>216, 26</value>
+  </data>
+  <data name="transferProgress4.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;transferProgress4.Name" xml:space="preserve">
+    <value>transferProgress4</value>
+  </data>
+  <data name="&gt;&gt;transferProgress4.Type" xml:space="preserve">
+    <value>GCBM.TransferProgress, GCBM, Version=2.4.6.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;transferProgress4.Parent" xml:space="preserve">
+    <value>tabTransfers</value>
+  </data>
+  <data name="&gt;&gt;transferProgress4.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="transferProgress3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 71</value>
+  </data>
+  <data name="transferProgress3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="transferProgress3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>216, 26</value>
+  </data>
+  <data name="transferProgress3.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;transferProgress3.Name" xml:space="preserve">
+    <value>transferProgress3</value>
+  </data>
+  <data name="&gt;&gt;transferProgress3.Type" xml:space="preserve">
+    <value>GCBM.TransferProgress, GCBM, Version=2.4.6.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;transferProgress3.Parent" xml:space="preserve">
+    <value>tabTransfers</value>
+  </data>
+  <data name="&gt;&gt;transferProgress3.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="transferProgress2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 41</value>
+  </data>
+  <data name="transferProgress2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="transferProgress2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>216, 26</value>
+  </data>
+  <data name="transferProgress2.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;transferProgress2.Name" xml:space="preserve">
+    <value>transferProgress2</value>
+  </data>
+  <data name="&gt;&gt;transferProgress2.Type" xml:space="preserve">
+    <value>GCBM.TransferProgress, GCBM, Version=2.4.6.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;transferProgress2.Parent" xml:space="preserve">
+    <value>tabTransfers</value>
+  </data>
+  <data name="&gt;&gt;transferProgress2.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="transferProgress1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 11</value>
+  </data>
+  <data name="transferProgress1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="transferProgress1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>216, 26</value>
+  </data>
+  <data name="transferProgress1.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;transferProgress1.Name" xml:space="preserve">
+    <value>transferProgress1</value>
+  </data>
+  <data name="&gt;&gt;transferProgress1.Type" xml:space="preserve">
+    <value>GCBM.TransferProgress, GCBM, Version=2.4.6.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;transferProgress1.Parent" xml:space="preserve">
+    <value>tabTransfers</value>
+  </data>
+  <data name="&gt;&gt;transferProgress1.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
   <data name="tabTransfers.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
   </data>
   <data name="tabTransfers.Size" type="System.Drawing.Size, System.Drawing">
-    <value>876, 514</value>
+    <value>882, 514</value>
   </data>
   <data name="tabTransfers.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -3001,7 +3142,7 @@
     <value>3, 3</value>
   </data>
   <data name="tabControlMain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>884, 540</value>
+    <value>890, 540</value>
   </data>
   <data name="tabControlMain.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -3636,6 +3777,9 @@
         Af8BAQH/AAAAAAAAAAAAAAAAAAAAAAAAAADgBwAAwAMAAMADAADAAwAAwAMAAMADAADAAwAAwAMAAMAD
         AADAAwAAwAMAAMADAADAAwAAwAMAAMADAAD4HwAA
 </value>
+  </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>1200, 630</value>
