@@ -1010,4 +1010,7 @@ Não se esqueça de me enviar um e-mail para que eu possa agradecer.</value>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="frmAboutBox_frmAboutBox___x64_" xml:space="preserve">
+	  <value> (x64)</value>
+  </data>
 </root>

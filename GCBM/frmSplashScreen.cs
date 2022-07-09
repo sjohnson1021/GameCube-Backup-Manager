@@ -129,7 +129,7 @@ namespace GCBM
             {
                 this.Invoke(del, progress);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 //not implemented!
             }
