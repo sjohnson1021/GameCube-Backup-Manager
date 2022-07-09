@@ -1421,7 +1421,13 @@ namespace GCBM
                 //game.Path = _file.FullName;
                 //game.Extension = _file.Extension;
                 //game.Size = (int)_file.Length;
-                list.Add(game);
+                IMAGE_PATH = game.Path;
+                if (CheckImage() && ReadImageDiscTOC())
+                {
+                    
+                        list.Add(game);
+                    
+                }
             }
             return list;
         }
@@ -2596,7 +2602,7 @@ namespace GCBM
         #endregion
 
         #endregion
-        
+
         #region Notifications
         /// <summary>
         /// Global Notifications
@@ -4445,7 +4451,7 @@ namespace GCBM
             //}
             //else
             //{
-                GlobalInstall(dgvGameList, 0);
+            GlobalInstall(dgvGameList, 0);
             //}
 
         }
